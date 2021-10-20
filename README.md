@@ -1,12 +1,5 @@
-# GradleBuildPlugins
+# YouTubeSearchResults
 
-👀 Sample project that shows you how to configure plugins. After generating the project from this template, remember that you need to customize detekt rules and spotless plugin, if needed:
-
-- If you need to customize detekt rules, edit the detekt.yml on your root directory
-
-- Inside the spotless folder, on your root directory - add your license file
-
-- Remember to refactor the package name :rocket:
 
 ### Prerequisites
 
