@@ -56,6 +56,16 @@ android {
         implementation(Libraries.ktxCore)
         implementation(Libraries.constraintLayout)
         implementation(Libraries.materialComponents)
+        implementation(Libraries.paging)
+        implementation(Libraries.retrofit)
+        implementation(Libraries.loggingInterceptor)
+        implementation(Libraries.gsonConverter)
+        implementation(Libraries.lifecycleRuntime)
+        implementation(Libraries.gsonConverter)
+        implementation(Libraries.viewModel)
+        implementation(Libraries.livedata)
+        implementation(Libraries.extensions)
+
 
         androidTestImplementation(TestLibraries.testRunner)
         androidTestImplementation(TestLibraries.espresso)

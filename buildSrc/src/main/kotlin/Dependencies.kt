@@ -1,3 +1,5 @@
+import sun.misc.Version
+
 object Versions {
 
     //Version codes for all the libraries
@@ -20,10 +22,19 @@ object Versions {
     const val dokka = "1.5.0"
     const val gradleVersionsPlugin = "0.39.0"
     const val jacoco = "0.8.7"
+
+    // Paging
+    const val paging = "3.0.0-alpha06"
+
+    // Networking
+    const val retrofit = "2.9.0"
+    const val loggingInterceptor = "4.8.1"
+
+    // Lifecycle
+    const val lifecycle = ":2.2.0"
 }
 
 object BuildPlugins {
-    //All the build plugins are added here
     const val androidLibrary = "com.android.library"
     const val ktlintPlugin = "org.jlleitschuh.gradle.ktlint"
     const val detektPlugin = "io.gitlab.arturbosch.detekt"
@@ -44,6 +55,14 @@ object Libraries {
         "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val ktxCore = "androidx.core:core-ktx:${Versions.ktx}"
     const val materialComponents = "com.google.android.material:material:${Versions.material}"
+    const val paging = "androidx.paging:paging-runtime:${Versions.paging}"
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val gsonConverter = "com.squareup.retrofit2:converter-scalars:${Versions.retrofit}"
+    const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
+    const val lifecycleRuntime =  "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
+    const val viewModel =  "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
+    const val livedata =  "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
+    const val extensions =  "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
 }
 
 object TestLibraries {
