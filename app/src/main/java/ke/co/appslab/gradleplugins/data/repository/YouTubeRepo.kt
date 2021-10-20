@@ -1,5 +1,6 @@
 package ke.co.appslab.gradleplugins.data.repository
 
+import android.util.Log
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
@@ -14,8 +15,9 @@ class YouTubeRepo {
     @OptIn(ExperimentalPagingApi::class)
     fun fetchVideos(): Flow<PagingData<String>> {
         return Pager(
-            PagingConfig(pageSize = 40, enablePlaceholders = false, prefetchDistance = 3),
-            pagingSourceFactory = { YouTubePagingSource(youTubeAPI = youtubeAPI) }
-        ).flow
+            PagingConfig(pageSize = 40, enablePlaceholders = false)
+        ) {
+            YouTubePagingSource(youtubeAPI)
+        }.flow
     }
 }

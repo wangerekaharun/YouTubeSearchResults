@@ -1,9 +1,7 @@
 package ke.co.appslab.gradleplugins.data.repository
 
-import android.util.Log
 import androidx.paging.PagingSource
 import ke.co.appslab.gradleplugins.data.network.YouTubeAPI
-import ke.co.appslab.gradleplugins.data.network.YouTubeClient
 import retrofit2.HttpException
 import java.io.IOException
 
@@ -11,10 +9,15 @@ class YouTubePagingSource(private val youTubeAPI: YouTubeAPI): PagingSource<Stri
     override suspend fun load(params: LoadParams<String>): LoadResult<String, String> {
         return try {
             val response = youTubeAPI.getVideos("ronaldo")
-            Log.d("response", response.toString())
-
+            var videos = ""
+            if (response.isSuccessful) {
+                val htmlVideo = response.body()!!
+                val videoRegex = Regex("videoId (.*?)[.]")
+                val ids = videoRegex.findAll(htmlVideo)
+                videos = ids.map { it.groupValues[1] }.joinToString()
+            }
             LoadResult.Page(
-                 listOf(),
+                videos.split(":"),
                 null,
                 null
             )

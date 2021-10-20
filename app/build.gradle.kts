@@ -4,6 +4,7 @@ plugins {
     id(BuildPlugins.kotlinParcelizePlugin)
     id(BuildPlugins.ktlintPlugin)
     id(BuildPlugins.jacocoAndroid)
+    id("kotlin-android")
 }
 
 jacoco {
@@ -65,6 +66,9 @@ android {
         implementation(Libraries.viewModel)
         implementation(Libraries.livedata)
         implementation(Libraries.extensions)
+        implementation(Libraries.exoPlayerCore)
+        implementation(Libraries.exoPlayerDash)
+        implementation(Libraries.exoPlayerUi)
 
 
         androidTestImplementation(TestLibraries.testRunner)
@@ -73,4 +77,9 @@ android {
 
         testImplementation(TestLibraries.junit4)
     }
+}
+dependencies {
+    implementation("androidx.appcompat:appcompat:1.3.1")
+    implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.1")
 }

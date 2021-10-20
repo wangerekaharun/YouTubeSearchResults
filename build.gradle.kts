@@ -35,7 +35,7 @@ buildscript {
     val jacocoVersion by extra("0.2")
 
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31")
         classpath("com.hiya:jacoco-android:$jacocoVersion")
     }
 }

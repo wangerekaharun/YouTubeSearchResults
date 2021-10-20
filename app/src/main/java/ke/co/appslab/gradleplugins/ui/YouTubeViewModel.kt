@@ -7,9 +7,9 @@ import ke.co.appslab.gradleplugins.data.repository.YouTubeRepo
 import kotlinx.coroutines.flow.Flow
 
 class YouTubeViewModel : ViewModel() {
-    private val redditRepo = YouTubeRepo()
+    private val youTubeRepo = YouTubeRepo()
 
     fun fetchVideos(): Flow<PagingData<String>> {
-        return redditRepo.fetchVideos()
+        return youTubeRepo.fetchVideos()
     }
 }

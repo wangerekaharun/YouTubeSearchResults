@@ -1,4 +1,4 @@
-import sun.misc.Version
+
 
 object Versions {
 
@@ -31,7 +31,10 @@ object Versions {
     const val loggingInterceptor = "4.8.1"
 
     // Lifecycle
-    const val lifecycle = ":2.2.0"
+    const val lifecycle = "2.2.0"
+
+    // Exoplayer
+    const val exoPlayer = "2.15.1"
 }
 
 object BuildPlugins {
@@ -63,6 +66,9 @@ object Libraries {
     const val viewModel =  "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val livedata =  "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
     const val extensions =  "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
+    const val exoPlayerCore = "com.google.android.exoplayer:exoplayer-core:${Versions.exoPlayer}"
+    const val exoPlayerUi = "com.google.android.exoplayer:exoplayer-ui:${Versions.exoPlayer}"
+    const val exoPlayerDash = "com.google.android.exoplayer:exoplayer-dash:${Versions.exoPlayer}"
 }
 
 object TestLibraries {
